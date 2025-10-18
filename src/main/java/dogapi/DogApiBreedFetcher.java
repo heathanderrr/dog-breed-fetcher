@@ -41,8 +41,8 @@ public class DogApiBreedFetcher implements BreedFetcher {
             } else {
                 throw new BreedNotFoundException(breed);
             }
-        } catch (IOException event) {
-            throw new RuntimeException(event);
+        } catch (IOException breedNotFoundException) {
+            throw new BreedNotFoundException(breed);
         }
 
     }
