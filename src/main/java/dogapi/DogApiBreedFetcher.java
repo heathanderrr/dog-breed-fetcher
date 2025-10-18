@@ -27,7 +27,7 @@ public class DogApiBreedFetcher implements BreedFetcher {
     public List<String> getSubBreeds(String breed) {
         final OkHttpClient build = client.newBuilder().build();
         final Request request = new Request.Builder()
-                .url(String.format("https://dog.ceo/api/%s/list", breed))
+                .url(String.format("https://dog.ceo/api/breed/%s/list", breed))
                 .build();
         try {
             final Response response = build.newCall(request).execute();
